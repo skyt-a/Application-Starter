@@ -1,0 +1,54 @@
+version: "3"
+services:
+  mysql:
+    build: 
+      context: .
+      dockerfile: ./docker/mysql/DockerFile
+    container_name: mysql
+    environment:
+      - MYSQL_DATABASE=homestead
+      - MYSQL_USER=homestead
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=secret
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - mysql-store:/var/lib/mysql
+      - ./initdb.d:/docker-entrypoint-initdb.d:rw
+      - ./docker/mysql/log:/var/log/mysql
+    ports:
+      - 3306:3306
+  webapi:
+    build: 
+      context: .
+      dockerfile: ./docker/webapi/DockerFile
+    container_name: webapi
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./api:/api
+      - /api/node_modules/
+    working_dir: /api
+    ports:
+      - 3000:3000
+    command: bash -c "npm i &&npm run start:dev"
+    links:
+      - mysql
+  frontapp:
+    build: 
+      context: .
+      dockerfile: ./docker/frontapp/DockerFile
+    container_name: frontapp
+    volumes:
+      - ./front:/front
+      # ホストとコンテナのnode_modulesを分離
+      - /front/node_modules/
+    working_dir: /front
+    # ExpressとReactのポートが競合するので3001に
+    ports:
+      - 3001:3000
+    command: npm run dev
+    links:
+      - webapi
+volumes:
+  mysql-store:

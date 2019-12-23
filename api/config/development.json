@@ -1,0 +1,20 @@
+{
+    "mysql": {
+        "master": {
+        "connectionLimit": 100,
+        "host": "mysql",
+        "user": "homestead",
+        "password": "secret",
+        "database": "homestead",
+        "port": 3306,
+        "ssl": false,
+        "connectTimeout": 5000
+        }
+    },
+    "server": {
+        "BASE_URI": "0.0.0.0",
+        "PORT": 3000,
+        "KEY_PATH": "",
+        "CERT_PATH": ""
+    }
+}
