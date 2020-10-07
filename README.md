@@ -14,3 +14,9 @@ MySQL
 ```
 docker-compose up
 ```
+
+## ページ
+```
+http://localhost:3001 (front)
+http://localhost:3000 (api)
+```
