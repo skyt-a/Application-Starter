@@ -1,11 +1,16 @@
 # Application-Starter
 なんかアプリ作るときの初期プロジェクト的なやつ
 
-## Frontend
+### Frontend
 Next.js
 
-## ServerSide
+### ServerSide
 Express.js + GraphQL
 
-## Database
+### Database
 MySQL
+
+## 起動
+```
+docker-compose up
+```

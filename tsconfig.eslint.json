@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+      "front/**/*.js",
+      "front/**/*.jsx",
+      "front/**/*.ts",
+      "front/**/*.tsx",
+      "api/**/*.ts",
+      "api/**/*.js",
+    ],
+    "exclude": [
+      "front/node_modules",
+      "api/node_modules"
+    ]
+  }

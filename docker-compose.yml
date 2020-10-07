@@ -25,6 +25,15 @@ services:
     container_name: webapi
     environment:
       NODE_ENV: development
+      PRISMA_CONFIG: |
+        port: 4466
+        databases:
+          default:
+            connector: mysql
+            host: mysql
+            port: 3306
+            user: homestead
+            password: secret
     volumes:
       - ./api:/api
       - /api/node_modules/
