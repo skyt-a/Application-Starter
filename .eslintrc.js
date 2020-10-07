@@ -110,7 +110,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        paths: ['front', 'api'],
+        paths: ['front/src', 'api/src'],
       },
     },
   },

@@ -16,6 +16,9 @@
     "url": "https://github.com/RinGoku/Application-Starter/issues"
   },
   "homepage": "https://github.com/RinGoku/Application-Starter#readme",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "devDependencies": {
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/mapbox-gl": "^1.12.0",
@@ -34,5 +37,8 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "typescript": "^4.0.3"
   }
 }
