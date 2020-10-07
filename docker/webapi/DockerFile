@@ -1,4 +1,6 @@
 FROM node:12.14.0
 COPY ./api .
-# RUN npx prisma generate
+RUN npm i -g @prisma/cli
+RUN npm install
+RUN prisma generate --schema=./prisma/schema.prisma
 EXPOSE 3000
