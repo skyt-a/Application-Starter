@@ -1,7 +1,7 @@
-version: "3"
+version: '3'
 services:
   mysql:
-    build: 
+    build:
       context: .
       dockerfile: ./docker/mysql/DockerFile
     container_name: mysql
@@ -19,7 +19,7 @@ services:
     ports:
       - 3306:3306
   webapi:
-    build: 
+    build:
       context: .
       dockerfile: ./docker/webapi/DockerFile
     container_name: webapi
@@ -44,7 +44,7 @@ services:
     links:
       - mysql
   frontapp:
-    build: 
+    build:
       context: .
       dockerfile: ./docker/frontapp/DockerFile
     container_name: frontapp
