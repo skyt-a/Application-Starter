@@ -1,11 +1,11 @@
 # Application-Starter
-なんかアプリ作るときの初期プロジェクト的なやつ(2021/10/10 要見直し. prismaとか使いたい)
+なんかアプリ作るときの初期プロジェクト的なやつ
 
 ### Frontend
-Next.js
+Svelte
 
 ### ServerSide
-Express.js + GraphQL
+Express.js + prisma + GraphQL
 
 ### Database
 MySQL
