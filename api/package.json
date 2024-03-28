@@ -17,7 +17,7 @@
     "@types/mysql2": "types/mysql2",
     "cors": "2.8.5",
     "dotenv": "^6.2.0",
-    "express": "^4.17.3",
+    "express": "^4.19.2",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "graphql-relay": "^0.5.5",
